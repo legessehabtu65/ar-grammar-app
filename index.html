@@ -2,246 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>AR Grammar — Animated Voice</title>
+    <title>AR Grammar — Learn English with Augmented Reality</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- A-Frame + AR.js -->
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
-
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-      <!-- HIRO test cube -->
-      <a-marker preset="hiro">
-        <a-box
-          position="0 0.5 0"
-          color="#E91E63"
-          animation="property: rotation; to: 360 360 0; loop: true; dur: 4000"
-        ></a-box>
-      </a-marker>
-
-      <!-- PRESENT PERFECT marker -->
-      <a-marker
-        id="marker-present"
-        type="pattern"
-        url="assets/markers/pattern-present-perfect.patt"
-      >
-        <a-plane
-          position="0 0 0"
-          rotation="-90 0 0"
-          width="2"
-          height="1"
-          color="#fff"
-          opacity="0.9"
-        ></a-plane>
-        <a-text
-          value="Present Perfect"
-          color="#222"
-          position="-0.8 0.02 0.1"
-          rotation="-90 0 0"
-          width="3"
-        ></a-text>
-
-        <!-- Grammar boxes -->
-        <a-box
-          id="box-s"
-          position="-0.6 0.02 0.25"
-          rotation="-90 0 0"
-          depth="0.12"
-          height="0.4"
-          width="0.5"
-          color="#4CAF50"
-        ></a-box>
-        <a-text
-          value="S"
-          position="-0.75 0.03 0.25"
-          rotation="-90 0 0"
-          width="1"
-          color="#fff"
-        ></a-text>
-
-        <a-box
-          id="box-have"
-          position="0 0.02 0.25"
-          rotation="-90 0 0"
-          depth="0.12"
-          height="0.4"
-          width="0.6"
-          color="#FF9800"
-        ></a-box>
-        <a-text
-          value="have/has"
-          position="-0.25 0.03 0.25"
-          rotation="-90 0 0"
-          width="2"
-          color="#fff"
-        ></a-text>
-
-        <a-box
-          id="box-v3"
-          position="0.6 0.02 0.25"
-          rotation="-90 0 0"
-          depth="0.12"
-          height="0.4"
-          width="0.6"
-          color="#2196F3"
-        ></a-box>
-        <a-text
-          value="V3"
-          position="0.45 0.03 0.25"
-          rotation="-90 0 0"
-          width="1.2"
-          color="#fff"
-        ></a-text>
-
-        <a-text
-          value="Example: She has eaten breakfast."
-          position="-1 0.02 -0.1"
-          rotation="-90 0 0"
-          width="3"
-          color="#333"
-        ></a-text>
-
-        <a-sound
-          id="sound-present"
-          src="assets/audio/present-perfect.mp3"
-          autoplay="false"
-          volume="4"
-        ></a-sound>
-      </a-marker>
-
-      <!-- CONDITIONAL TYPE 2 marker -->
-      <a-marker
-        id="marker-conditional"
-        type="pattern"
-        url="assets/markers/pattern-conditional-type2.patt"
-      >
-        <a-plane
-          position="0 0 0"
-          rotation="-90 0 0"
-          width="2"
-          height="1"
-          color="#fff"
-          opacity="0.9"
-        ></a-plane>
-        <a-text
-          value="Conditional Type 2"
-          color="#222"
-          position="-0.8 0.02 0.1"
-          rotation="-90 0 0"
-          width="3"
-        ></a-text>
-
-        <a-box
-          id="box-if"
-          position="-0.6 0.02 0.25"
-          rotation="-90 0 0"
-          depth="0.12"
-          height="0.4"
-          width="0.9"
-          color="#03A9F4"
-        ></a-box>
-        <a-text
-          value="If + past simple"
-          position="-0.95 0.03 0.25"
-          rotation="-90 0 0"
-          width="2"
-          color="#fff"
-        ></a-text>
-
-        <a-box
-          id="box-would"
-          position="0.6 0.02 0.25"
-          rotation="-90 0 0"
-          depth="0.12"
-          height="0.4"
-          width="0.9"
-          color="#E91E63"
-        ></a-box>
-        <a-text
-          value="would + base verb"
-          position="0.2 0.03 0.25"
-          rotation="-90 0 0"
-          width="2.2"
-          color="#fff"
-        ></a-text>
-
-        <a-text
-          value="Example: If I studied more, I would pass."
-          position="-1 0.02 -0.1"
-          rotation="-90 0 0"
-          width="3"
-          color="#333"
-        ></a-text>
-
-        <a-sound
-          id="sound-conditional"
-          src="assets/audio/conditional-type2.mp3"
-          autoplay="false"
-          volume="4"
-        ></a-sound>
-      </a-marker>
-
-      <a-entity camera></a-entity>
-    </a-scene>
-
-    <!-- Overlay -->
-    <div id="hud">
-      <h3>AR Grammar (Animated)</h3>
-      <ul>
-        <li>Present Perfect → highlights parts with audio</li>
-        <li>Conditional Type 2 → highlights parts with audio</li>
+  <body class="landing">
+    <div class="landing-container">
+      <h1>AR Grammar</h1>
+      <p>
+        Explore English grammar through interactive Augmented Reality
+        lessons.<br />
+        Point your webcam at printed grammar markers and watch 3D explanations
+        appear.
+      </p>
+      <ul class="features">
+        <li>📘 Present Perfect</li>
+        <li>🧩 Conditional Type 2</li>
+        <li>🎧 Voice explanations</li>
+        <li>✨ Animated highlights</li>
       </ul>
+      <button id="start-btn">Start Lesson</button>
     </div>
 
-    <!-- Script for audio + animation -->
     <script>
-      // Helper to flash color briefly
-      function flashBoxColor(el, color, duration = 700) {
-        if (!el) return;
-        const original = el.getAttribute("color");
-        el.setAttribute("color", color);
-        setTimeout(() => el.setAttribute("color", original), duration);
-      }
-
-      function linkMarkerWithAnimation(markerId, soundId, steps) {
-        const marker = document.querySelector(`#${markerId}`);
-        const sound = document.querySelector(`#${soundId}`);
-        if (!marker || !sound) return;
-
-        marker.addEventListener("markerFound", () => {
-          console.log(`${markerId} found`);
-          sound.components.sound.playSound();
-
-          // sequence of highlights timed with speech
-          steps.forEach((step, i) => {
-            setTimeout(
-              () =>
-                flashBoxColor(document.querySelector(step.id), step.color, 600),
-              step.time
-            );
-          });
-        });
-
-        marker.addEventListener("markerLost", () => {
-          console.log(`${markerId} lost`);
-          sound.components.sound.stopSound();
-        });
-      }
-
-      // highlight sequences (approx timing in ms)
-      linkMarkerWithAnimation("marker-present", "sound-present", [
-        { id: "#box-s", color: "#00E676", time: 500 },
-        { id: "#box-have", color: "#FFC107", time: 2500 },
-        { id: "#box-v3", color: "#2979FF", time: 4000 },
-      ]);
-
-      linkMarkerWithAnimation("marker-conditional", "sound-conditional", [
-        { id: "#box-if", color: "#4DD0E1", time: 700 },
-        { id: "#box-would", color: "#F06292", time: 3000 },
-      ]);
+      document.getElementById("start-btn").addEventListener("click", () => {
+        window.location.href = "ar.html";
+      });
     </script>
   </body>
 </html>

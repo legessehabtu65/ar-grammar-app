@@ -1,0 +1,104 @@
+/* Basic reset */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Always-visible overlay */
+#hud {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-family: system-ui, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    z-index: 999999;
+    /* stay above webcam feed */
+    max-width: 360px;
+    pointer-events: auto;
+    /* clickable links */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+#hud h3 {
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    color: #4FC3F7;
+}
+
+#hud a {
+    color: #FFD54F;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#hud a:hover {
+    text-decoration: underline;
+}
+
+/* ========== Landing Page ========== */
+body.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.landing-container {
+  max-width: 600px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.landing-container h1 {
+  font-size: 2.3em;
+  margin-bottom: 10px;
+  color: #4FC3F7;
+}
+
+.landing-container p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.features li {
+  margin: 5px 0;
+  font-size: 1.05em;
+}
+
+#start-btn {
+  background: #4FC3F7;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#start-btn:hover {
+  background: #03A9F4;
+}
